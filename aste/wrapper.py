@@ -83,7 +83,7 @@ class SpanModel(BaseModel):
             include_package="span_model",
             use_dataset_reader="",
             output_file=str(path_temp_out),
-            cuda_device=0,
+            cuda_device=-1,
             silent="",
         )
 

@@ -2,7 +2,7 @@ local template = import "template.libsonnet";
 
 template.SpanModel {
   bert_model: "bert-base-uncased",
-  cuda_device: 0,
+  cuda_device: -1,
   data_paths: {
     train: "/tmp/train.json",
     validation: "/tmp/dev.json",
