@@ -13,3 +13,4 @@ model_outputs/
 outputs/
 pretrained_14lap.tar
 pretrained_14lap/
+tmp/
