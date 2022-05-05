@@ -1,8 +1,7 @@
 {
   "data_loader": {
-    "sampler": {
-      "type": "random"
-    }
+    "batch_size": 1,
+    "shuffle": true
   },
   "dataset_reader": {
     "max_span_width": 8,
@@ -108,14 +107,14 @@
   },
   "trainer": {
     "checkpointer": {
-      "num_serialized_models_to_keep": 1
+      "keep_most_recent_by_count": 1
     },
     "cuda_device": -1,
     "grad_norm": 5,
     "learning_rate_scheduler": {
       "type": "slanted_triangular"
     },
-    "num_epochs": 10,
+    "num_epochs": 2, // 10
     "optimizer": {
       "lr": 0.001,
       "parameter_groups": [
