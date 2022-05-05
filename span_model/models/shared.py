@@ -172,7 +172,8 @@ class BiAffineSpanExtractor(SpanExtractor):
         self,
         sequence_tensor: torch.FloatTensor,
         span_indices: torch.LongTensor,
-        span_indices_mask: torch.BoolTensor = None,
+        sequence_mask: torch.BoolTensor = None,
+        span_indices_mask: torch.BoolTensor = None
     ) -> Tensor:
         x = self.endpoint_extractor(sequence_tensor, span_indices, span_indices_mask)
         x = self.net(x)
@@ -204,6 +205,7 @@ class LSTMWithMarkers(SpanExtractor):
         self,
         sequence_tensor: torch.FloatTensor,
         span_indices: torch.LongTensor,
+        sequence_mask: torch.BoolTensor = None,
         span_indices_mask: torch.BoolTensor = None,
     ) -> Tensor:
         x, mask = batched_span_select(sequence_tensor, span_indices)

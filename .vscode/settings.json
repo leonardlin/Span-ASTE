@@ -1,0 +1,6 @@
+{
+  "python.defaultInterpreterPath": "/home/leonard/.local/share/virtualenvs/Span-ASTE-j6fu7b2g/",
+  "python.analysis.extraPaths": [
+    "./aste"
+  ]
+}

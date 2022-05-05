@@ -44,6 +44,7 @@ class MaxPoolSpanExtractor(SpanExtractor):
         self,
         sequence_tensor: torch.FloatTensor,
         span_indices: torch.LongTensor,
+        sequence_mask: torch.BoolTensor = None,
         span_indices_mask: torch.BoolTensor = None,
     ) -> Tensor:
         span_embeddings, span_mask = util.batched_span_select(sequence_tensor, span_indices)
@@ -283,8 +284,9 @@ class SpanModel(Model):
         relation_labels=None,
         dep_graph_labels=None,  # New
         tag_labels=None,  # New
-        grid_labels=None,  # New
-    ):
+        grid_labels=None,  # New,
+        *inputs
+    ) -> Dict[str, torch.Tensor]:
         """
         TODO: change this.
         """
@@ -419,7 +421,7 @@ class SpanModel(Model):
         return new_span_embeddings
 
     @overrides
-    def make_output_human_readable(self, output_dict: Dict[str, torch.Tensor]):
+    def make_output_human_readable(self, output_dict: Dict[str, torch.Tensor]) -> Dict[str, torch.Tensor]:
         """
         Converts the list of spans and predicted antecedent indices into clusters
         of spans for each element in the batch.

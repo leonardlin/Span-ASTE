@@ -215,6 +215,7 @@ class ProperRelationExtractor(Model):
         sentence_lengths,
         relation_labels: torch.IntTensor = None,
         metadata: List[Dict[str, Any]] = None,
+        *input,
     ) -> Dict[str, torch.Tensor]:
         self._active_namespace = f"{metadata.dataset}__relation_labels"
 

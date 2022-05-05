@@ -143,6 +143,7 @@ class NERTagger(Model):
         sentence_lengths: torch.Tensor,
         ner_labels: torch.IntTensor = None,
         metadata: List[Dict[str, Any]] = None,
+        *inputs: Any
     ) -> Dict[str, torch.Tensor]:
         """
         TODO: Write documentation.

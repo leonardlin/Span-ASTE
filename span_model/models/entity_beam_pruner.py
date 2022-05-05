@@ -249,9 +249,10 @@ class TwoScorePruner(torch.nn.Module):
         embeddings: torch.FloatTensor,
         mask: torch.LongTensor,
         num_items_to_keep: Union[int, torch.LongTensor],
-    ) -> Tuple[
-        torch.FloatTensor, torch.LongTensor, torch.LongTensor, torch.FloatTensor
-    ]:
+        *input
+    ):# -> Tuple[
+      #  torch.FloatTensor, torch.LongTensor, torch.LongTensor, torch.FloatTensor
+    #]:
         # If an int was given for number of items to keep, construct tensor by repeating the value.
         if isinstance(num_items_to_keep, int):
             batch_size = mask.size(0)

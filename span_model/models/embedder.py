@@ -83,7 +83,7 @@ class DoubleMixPTMEmbedder(TokenEmbedder):
         return new_fn
 
     @overrides
-    def get_output_dim(self):
+    def get_output_dim(self) -> int:
         return self._matched_embedder.get_output_dim()
 
     @staticmethod
@@ -113,7 +113,8 @@ class DoubleMixPTMEmbedder(TokenEmbedder):
             wordpiece_mask: torch.BoolTensor,
             type_ids: Optional[torch.LongTensor] = None,
             segment_concat_mask: Optional[torch.BoolTensor] = None,
-    ) -> torch.Tensor:  # type: ignore
+            *input,
+    ): # -> torch.Tensor:  # type: ignore
         """
         # Parameters
 
