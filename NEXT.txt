@@ -1,0 +1,7 @@
+https://github.com/allenai/allennlp/discussions/5265
+
+multilingual allennlp
+
+https://www.semanticscholar.org/paper/mT5%3A-A-Massively-Multilingual-Pre-trained-Xue-Constant/74276a37bfa50f90dfae37f767b2b67784bd402a
+
+https://github.com/google-research/multilingual-t5
