@@ -1,6 +1,10 @@
 ## Span-ASTE: Learning Span-Level Interactions for Aspect Sentiment Triplet Extraction
 
-**\*\*\*\*\* New March 31th, 2022: Scikit-Style API for Easy Usage \*\*\*\*\***
+**\*\*\*\*\* Changes compared to original Repo \*\*\*\*\***
+* Tested on Python 3.8
+* Updated AllenNLP to v2.9.3
+* Updated depdenencies to work with AllenNLP v2.9.3
+
 
 [![PWC](https://img.shields.io/badge/PapersWithCode-Benchmark-%232cafb1)](https://paperswithcode.com/sota/aspect-sentiment-triplet-extraction-on-aste)
 [![Colab](https://img.shields.io/badge/Colab-Code%20Demo-%23fe9f00)](https://colab.research.google.com/drive/1F9zW_nVkwfwIVXTOA_juFDrlPz5TLjpK?usp=sharing)
